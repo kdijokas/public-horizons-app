@@ -7,6 +7,11 @@ import iframeRouteRestorationPlugin from './plugins/vite-plugin-iframe-route-res
 
 const isDev = process.env.NODE_ENV !== 'production';
 
+// Check for required environment variable
+if (!process.env.VITE_REQUIRED_API_KEY) {
+	throw new Error('❌ Build failed: VITE_REQUIRED_API_KEY environment variable is required!');
+}
+
 const configHorizonsViteErrorHandler = `
 const observer = new MutationObserver((mutations) => {
 	for (const mutation of mutations) {
