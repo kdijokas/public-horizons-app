@@ -7,8 +7,7 @@ import iframeRouteRestorationPlugin from './plugins/vite-plugin-iframe-route-res
 
 const isDev = process.env.NODE_ENV !== 'production';
 
-// Check for required environment variable
-if (!process.env.VITE_REQUIRED_API_KEY) {
+if (!process.env.VITE_REQUIRED_API_KEY2) {
 	throw new Error('❌ Build failed: VITE_REQUIRED_API_KEY environment variable is required!');
 }
 
